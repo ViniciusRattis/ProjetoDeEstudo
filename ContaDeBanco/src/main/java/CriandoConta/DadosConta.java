@@ -7,14 +7,14 @@ import lombok.*;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class AcessoConta extends DadosCliente {
+public class DadosConta extends DadosCliente {
 
     private String agencia;     // 4 Digitos
     private String conta;       // 6 Digitos
     private String senha;       // 6 Digitos
     private double saldo = 0;
 
-    public AcessoConta(String senha, String agencia, String conta, String nome, String cpf) {
+    public DadosConta(String senha, String agencia, String conta, String nome, String cpf) {
         super(nome, cpf);
         this.senha = senha;
         this.agencia = agencia;

@@ -4,12 +4,11 @@ import java.util.Scanner;
 
 public class CreditandoEmContaEscolhida {
 
-    public void adicionarValorEmConta(AcessoConta[] contas) {
+    public void adicionarValorEmConta(DadosConta[] contas) {
         Scanner scanner = new Scanner(System.in);
-        AcessoConta conta;
         double valorCreditar;
 
-        conta = new ValidandoInformacaoNasContas().consultarConta(contas);
+        DadosConta conta = new ValidandoInformacaoNasContas().consultarConta(contas);
 
         System.out.println("Informe um Valor para Creditar na Conta: ");
         valorCreditar = scanner.nextInt();

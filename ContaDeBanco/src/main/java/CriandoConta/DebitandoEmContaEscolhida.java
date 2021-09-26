@@ -4,12 +4,11 @@ import java.util.Scanner;
 
 public class DebitandoEmContaEscolhida {
 
-    public void retirarValorEmConta(AcessoConta[] contas) {
+    public void retirarValorEmConta(DadosConta[] contas) {
         Scanner scanner = new Scanner(System.in);
-        AcessoConta conta;
         double valorDebita;
 
-        conta = new ValidandoInformacaoNasContas().consultarConta(contas);
+        DadosConta conta = new ValidandoInformacaoNasContas().consultarConta(contas);
         new ValidandoInformacaoNasContas().consultarSenha(conta);
 
         System.out.println("Informe um Valor para Creditar na Conta: ");

@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class ValidandoInformacaoNasContas {
     Scanner scanner = new Scanner(System.in);
 
-    public AcessoConta consultarConta(AcessoConta[] contas) {
+    public DadosConta consultarConta(DadosConta[] contas) {
         System.out.println("Informe um numero de uma Conta: ");
-        AcessoConta contaEncontrada = encontrarConta(contas, scanner.next());
+        DadosConta contaEncontrada = encontrarConta(contas, scanner.next());
 
         if (contaEncontrada == null) {
             System.out.println("numero conta não encontrada");
@@ -16,7 +16,7 @@ public class ValidandoInformacaoNasContas {
         return contaEncontrada;
     }
 
-    public void consultarSenha(AcessoConta conta){
+    public void consultarSenha(DadosConta conta){
 
         System.out.println("Informe os 6 Digitos da Senha: ");
 
@@ -25,12 +25,12 @@ public class ValidandoInformacaoNasContas {
         }
     }
 
-    private boolean validarSenha(String consultaSenha, AcessoConta contaEncontrada) {
+    private boolean validarSenha(String consultaSenha, DadosConta contaEncontrada) {
         return consultaSenha.equals(contaEncontrada.getSenha());
     }
 
-    private AcessoConta encontrarConta(AcessoConta[] contas,String consultaNumeroConta) {
-        for (AcessoConta conta : contas) {
+    private DadosConta encontrarConta(DadosConta[] contas, String consultaNumeroConta) {
+        for (DadosConta conta : contas) {
             if (consultaNumeroConta.equals(conta.getConta())) {
                 return conta;
             }
