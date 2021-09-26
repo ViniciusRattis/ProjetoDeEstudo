@@ -2,14 +2,9 @@ package CriandoConta;
 
 import java.util.Scanner;
 
-public class ConsultandoSaldo {
-
-    private String consultaNumeroConta;
-    private String consultaSenha;
+public class ConsultandoContas {
 
     public void consultarSaldo(AcessoConta[] contas){
-
-
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Informe um numero de uma Conta: ");
@@ -42,4 +37,6 @@ public class ConsultandoSaldo {
         }
         return null;
     }
+
+
 }

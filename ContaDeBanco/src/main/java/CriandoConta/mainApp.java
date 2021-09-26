@@ -45,19 +45,19 @@ public class mainApp {
 
     private static void direcionadoOpcaoMenuInicial(Scanner scanner, AcessoConta[] contas) {
         switch (menuInicial(scanner)){
-            case 1:
+            case 1: // Cadastrar Conta
                 System.out.println("opcao 1");
                 break;
             case 2: // Consultar Saldo
-                new ConsultandoSaldo().consultarSaldo(contas);
+                new ConsultandoContas().consultarSaldo(contas);
                 break;
-            case 3:
-                System.out.println("opcao 3");
+            case 3: // Adicionando valor em uma Conta escolhida
+                new CreditandoEmContaEscolhida().adicionarValorEmConta(contas);
                 break;
-            case 4:
+            case 4: // Retirando valor em uma Conta escolhida
                 System.out.println("opcao 4");
                 break;
-            case 5:
+            case 5: // Sair
                 break;
         }
     }
