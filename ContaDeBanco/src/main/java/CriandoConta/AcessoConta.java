@@ -5,6 +5,7 @@ import lombok.*;
 //@Data
 @Setter
 @Getter
+@AllArgsConstructor
 @NoArgsConstructor
 public class AcessoConta extends DadosCliente {
 

@@ -1,5 +1,5 @@
-Crie um programa JAVA que contenha as classes Contas e Cliente
-O cliente possui um atributo Conta.
+* Crie um programa JAVA que contenha as classes Contas e Cliente
+* O cliente possui um atributo Conta.
 A conta deve ter uma senha numérica de até 6 dígitos.
 Esse programa deve possuir um menu onde o usuário possa:
 1. Abrir uma Conta (Cadastrar conta)
@@ -25,7 +25,7 @@ Esse programa deve possuir um menu onde o usuário possa:
    * Lombok
    * Lib para verificar se a String contem apenas números
 
-   1. Dica:
+7. Dica:
    * Para utilizar o Maven é necessário criar um Maven Project
    * Para o Lombok funcionar é necessário instalar na sua IDE (IntelliJ)
    * Use Lombok para implementar os Gets e Sets
