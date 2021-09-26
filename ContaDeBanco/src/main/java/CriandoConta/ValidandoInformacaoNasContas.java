@@ -16,25 +16,14 @@ public class ValidandoInformacaoNasContas {
         return contaEncontrada;
     }
 
-//    public void consultarSenha(AcessoConta[] contas){
-//
-//        System.out.println("Informe um numero de uma Conta: ");
-//        AcessoConta contaEncontrada = encontrarConta(contas, scanner.next());
-//
-//        if (contaEncontrada == null ){
-//            System.out.println("numero conta não encontrada");
-//            return;
-//        }
-//
-//        System.out.println("Informe os 6 Digitos da Senha: ");
-//        boolean opcao2 = validarSenha(scanner.next(), contaEncontrada);
-//
-//        if (opcao2) {
-//            System.out.println("o Saldo em Conta: " + contaEncontrada.getSaldo());
-//        } else{
-//            System.out.println("senha invalida.");
-//        }
-//    }
+    public void consultarSenha(AcessoConta conta){
+
+        System.out.println("Informe os 6 Digitos da Senha: ");
+
+        if (! validarSenha(scanner.next(), conta)) {
+            System.out.println("senha invalida.");
+        }
+    }
 
     private boolean validarSenha(String consultaSenha, AcessoConta contaEncontrada) {
         return consultaSenha.equals(contaEncontrada.getSenha());

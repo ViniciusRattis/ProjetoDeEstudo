@@ -49,13 +49,13 @@ public class mainApp {
                 System.out.println("opcao 1");
                 break;
             case 2: // Consultar Saldo
-                new ConsultandoContas().consultarSaldo(contas);
+                new ConsultandoSaldo().consultarSaldo(contas);
                 break;
             case 3: // Adicionando valor em uma Conta escolhida
                 new CreditandoEmContaEscolhida().adicionarValorEmConta(contas);
                 break;
             case 4: // Retirando valor em uma Conta escolhida
-                System.out.println("opcao 4");
+                new DebitandoEmContaEscolhida().retirarValorEmConta(contas);
                 break;
             case 5: // Sair
                 break;
