@@ -32,3 +32,13 @@ Esse programa deve possuir um menu onde o usuário possa:
    * As classes Conta e Cliente deve ter apenas um construtor que receba todos os parâmetros. (NÃO USE Lombok). Develop it
    * A classe da Lib que verifica se a String contém apenas números é StringUtils
    * Nesse exercício o google vai ser muito seu amigo. Para um melhor resultado, faça as pesquisas em inglês caso não ache em português.
+
+8. Exercício de casa:
+   * Evoluir o exercício do dia 22/07:
+   * Crie o pacote criandoconta.repository
+   * Crie as classes ContaRepository e ClienteRepository
+   * Crei os metodos add e find em cada respository
+   * Use o criandoconta.repository no seu método main
+   * Crie a classe poupança
+   * Implemente o metodo renderJuros();
+   * Adicione no menu a opção de criar uma poupança

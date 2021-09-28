@@ -1,24 +1,25 @@
-package CriandoConta;
+package criandoconta.dados;
+
 import lombok.*;
 
 
 //@Data
 @Setter
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
-public class DadosConta extends DadosCliente {
-
+public class DadosConta {
     private String agencia;     // 4 Digitos
     private String conta;       // 6 Digitos
     private String senha;       // 6 Digitos
-    private double saldo = 0;
+    private double saldo;
+    private DadosCliente cliente;
 
-    public DadosConta(String senha, String agencia, String conta, String nome, String cpf) {
-        super(nome, cpf);
-        this.senha = senha;
+    public DadosConta(String agencia, String conta, String senha, double saldo, DadosCliente cliente) {
         this.agencia = agencia;
         this.conta = conta;
+        this.senha = senha;
+        this.saldo = saldo;
+        this.cliente = cliente;
     }
 
     @Override
@@ -26,12 +27,7 @@ public class DadosConta extends DadosCliente {
         return "Agencia: " + getAgencia()  +
                 "\nConta: " + getConta() +
                 "\nSenha: " + getSenha() +
-                "\nSaldo: " + getSaldo() +
-                "\nNome: " + getNome() +
-                "\nCPF: " + getCpf();
+                "\nSaldo: " + getSaldo();
     }
-
-
-
 }
 
