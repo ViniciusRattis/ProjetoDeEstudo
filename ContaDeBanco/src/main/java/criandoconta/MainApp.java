@@ -23,25 +23,25 @@ public class MainApp {
                 new ConsultarSaldoTela(contasRepository, scanner),
                 new CreditarContaTela(contasRepository, scanner),
                 new DebitarContaTela(contasRepository, scanner),
-                new CadastrarContaTela()
+                new CadastrarContaTela(contasRepository,clienteRepository, scanner)
         ).mostrar();
     }
 
     public static void criarDadosFakes(ClienteRepository clienteRepository, ContaRepository contasRepository) {
         DadosCliente cliente1 = new DadosCliente("Vinicius","111.111.111-11");
-        DadosCliente cliente2 = new DadosCliente("Tulio","222.222.222-22");
+        DadosCliente cliente2 = new DadosCliente("Rattis","222.222.222-22");
         clienteRepository.add(cliente1);
         clienteRepository.add(cliente2);
 
         contasRepository.add(new DadosConta(
                 geradorNumeroAleatorio(4),
                 geradorNumeroAleatorio(6),
-                "123456", 0, cliente1));
+                "123456", cliente1));
 
         contasRepository.add(new DadosConta(
                 geradorNumeroAleatorio(4),
                 geradorNumeroAleatorio(6),
-                "789101", 0, cliente2));
+                "789101", cliente2));
     }
 
     private static String geradorNumeroAleatorio(int quantidadeDeDigitos){

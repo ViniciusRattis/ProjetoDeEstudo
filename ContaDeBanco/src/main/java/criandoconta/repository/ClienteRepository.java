@@ -1,12 +1,15 @@
 package criandoconta.repository;
 
 import criandoconta.dados.DadosCliente;
-import criandoconta.dados.DadosConta;
 
 import java.util.ArrayList;
 
 public class ClienteRepository {
-    private ArrayList<DadosCliente> clientes;
+    private final ArrayList<DadosCliente> clientes;
+
+    public ClienteRepository() {
+        this.clientes = new ArrayList<>();
+    }
 
     public void add(DadosCliente cliente) {
         clientes.add(cliente);

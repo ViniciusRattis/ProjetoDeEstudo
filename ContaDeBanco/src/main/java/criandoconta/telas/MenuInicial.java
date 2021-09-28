@@ -1,6 +1,5 @@
 package criandoconta.telas;
 
-import criandoconta.repository.ContaRepository;
 import java.util.Scanner;
 
 public class MenuInicial {

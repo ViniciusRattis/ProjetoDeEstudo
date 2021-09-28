@@ -5,7 +5,7 @@ import criandoconta.dados.DadosConta;
 import java.util.ArrayList;
 
 public class ContaRepository {
-    private ArrayList <DadosConta> contas;
+    private final ArrayList <DadosConta> contas;
 
     public ContaRepository() {
         this.contas = new ArrayList<>();

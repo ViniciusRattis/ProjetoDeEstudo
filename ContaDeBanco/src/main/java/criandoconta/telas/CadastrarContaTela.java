@@ -1,13 +1,47 @@
 package criandoconta.telas;
 
+import criandoconta.dados.DadosCliente;
+import criandoconta.dados.DadosConta;
+import criandoconta.repository.ClienteRepository;
+import criandoconta.repository.ContaRepository;
+
 import java.util.Random;
+import java.util.Scanner;
 
 public class CadastrarContaTela {
+    private final ContaRepository contasRepository;
+    private final ClienteRepository clienteRepository;
+    private final Scanner scanner;
 
-    public void mostrar () {
-
+    public CadastrarContaTela (ContaRepository contasRepository, ClienteRepository clienteRepository, Scanner scanner) {
+        this.contasRepository = contasRepository;
+        this.clienteRepository = clienteRepository;
+        this.scanner = scanner;
     }
 
+
+    public void mostrar () {
+        System.out.println("Informe as seguintes Informações:");
+
+        System.out.print("Digite um NOME: ");
+        String nome = scanner.next();
+
+        System.out.print("Digite um CPF: ");
+        String cpf = scanner.next(); // 111.111.111-11
+
+        System.out.print("Digite uma SENHA: ");
+        String senha = scanner.next();
+
+        String agencia = geradorNumeroAleatorio(4);
+
+        String conta = geradorNumeroAleatorio(6);
+
+        DadosCliente dadoscliente = new DadosCliente(nome,cpf);
+        DadosConta dadosconta = new DadosConta(agencia, conta, senha, dadoscliente);
+
+        clienteRepository.add(dadoscliente);
+        contasRepository.add(dadosconta);
+    }
 
     private String geradorNumeroAleatorio(int quantidadeDeDigitos){
         String digito;
@@ -19,28 +53,6 @@ public class CadastrarContaTela {
         return digito;
     }
 
-    // Cadastrando 2 Contas
-//    contas[0] = new DadosConta("123456",
-//                                       "Vinicius",
-//                                       "111.111.111-11");
-//
-//    contas[1] = new DadosConta("789101",
-//                                       "Tulio",
-//                                       "222.222.222-22");
-//
-//        System.out.println(contas[0]);
-//        System.out.println();
-//        System.out.println(contas[1]);
-
-    // nome
-    // cpf
-    // senha
-    // agencia = Random
-    // contas = Random
-    // saldo = 0
-
     // validando a senha se tem só numeros
     //System.out.println(StringUtils.isNumeric(contas[0].getSenha()));
-
-
 }

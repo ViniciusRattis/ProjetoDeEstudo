@@ -14,11 +14,11 @@ public class DadosConta {
     private double saldo;
     private DadosCliente cliente;
 
-    public DadosConta(String agencia, String conta, String senha, double saldo, DadosCliente cliente) {
+    public DadosConta(String agencia, String conta, String senha, DadosCliente cliente) {
         this.agencia = agencia;
         this.conta = conta;
         this.senha = senha;
-        this.saldo = saldo;
+        this.saldo = 0; // ao abrir a conta o saldo tem que ser 0.
         this.cliente = cliente;
     }
 
