@@ -1,6 +1,6 @@
 package criandoconta.dados;
 
-public class Poupanca extends DadosConta {
+public class Poupanca extends Conta {
 
     public void renderJuros() {
         double saldo = getSaldo();

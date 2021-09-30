@@ -1,6 +1,6 @@
 package criandoconta.telas;
 
-import criandoconta.dados.DadosConta;
+import criandoconta.dados.Conta;
 import criandoconta.repository.ContaRepository;
 import java.util.Scanner;
 
@@ -16,7 +16,7 @@ public class CreditarContaTela {
     public void mostrar() {
         System.out.println("Informe um numero de uma Conta: ");
         String numeroDeConta = scanner.next();
-        DadosConta contaEncontrada = contaRepository.find(numeroDeConta);
+        Conta contaEncontrada = contaRepository.find(numeroDeConta);
         if (contaEncontrada == null) {
             System.out.println("numero conta não encontrada");
             return;

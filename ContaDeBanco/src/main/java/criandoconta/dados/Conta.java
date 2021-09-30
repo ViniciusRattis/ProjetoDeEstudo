@@ -2,19 +2,17 @@ package criandoconta.dados;
 
 import lombok.*;
 
-
-//@Data
 @Setter
 @Getter
 @NoArgsConstructor
-public class DadosConta {
+public class Conta {
     private String agencia;     // 4 Digitos
     private String conta;       // 6 Digitos
     private String senha;       // 6 Digitos
     private double saldo;
-    private DadosCliente cliente;
+    private Cliente cliente;
 
-    public DadosConta(String agencia, String conta, String senha, DadosCliente cliente) {
+    public Conta(String agencia, String conta, String senha, Cliente cliente) {
         this.agencia = agencia;
         this.conta = conta;
         this.senha = senha;
@@ -27,7 +25,12 @@ public class DadosConta {
         return "Agencia: " + getAgencia()  +
                 "\nConta: " + getConta() +
                 "\nSenha: " + getSenha() +
-                "\nSaldo: " + getSaldo();
+                "\nSaldo: " + getSaldo() +
+                "\nNome: " + getCliente().getNome() +
+                "\nCPF: " + getCliente().getCpf() +
+                "\n";
     }
+
+
 }
 

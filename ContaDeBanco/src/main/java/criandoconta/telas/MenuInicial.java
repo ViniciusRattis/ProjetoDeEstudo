@@ -1,5 +1,7 @@
 package criandoconta.telas;
 
+import criandoconta.repository.ContaRepository;
+
 import java.util.Scanner;
 
 public class MenuInicial {
@@ -22,7 +24,7 @@ public class MenuInicial {
         this.cadastrarContaTela = cadastrarContaTela;
     }
    
-    public void mostrar() {
+    public void mostrar(ContaRepository contasRepository) {
         int escolheOpcao;
 
         do {
@@ -30,6 +32,7 @@ public class MenuInicial {
 
             System.out.print("Digite umas das opções: ");
             escolheOpcao = scanner.nextInt();
+            System.out.println();
             switch (escolheOpcao){
                 case 1: // Cadastrar Conta
                     cadastrarContaTela.mostrar();
@@ -44,6 +47,9 @@ public class MenuInicial {
                     debitarContaTela.mostrar();
                     break;
                 case 5: // Sair
+                    break;
+                case 6: // Imprimir
+                    contasRepository.ImprimirTela();
                     break;
             }
         }while (escolheOpcao != 5);
