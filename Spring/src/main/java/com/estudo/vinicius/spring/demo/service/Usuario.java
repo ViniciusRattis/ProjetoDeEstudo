@@ -9,4 +9,9 @@ public class Usuario {
         this.nome = nome;
         this.senha = senha;
     }
+
+    public String getNome() {
+        return nome;
+    }
+
 }
